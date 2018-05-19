@@ -66,7 +66,7 @@ class UserController extends Controller
         ->encodePassword($user, $user->getPlainPassword());
       $user->setPassword($encoded);
 
-      $user->addRole('ROLE_USER');
+//      $user->addRole('ROLE_USER');
 
       $em->persist($user);
       $em->flush();

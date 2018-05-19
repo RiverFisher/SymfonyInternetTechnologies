@@ -70,6 +70,8 @@ class User implements EncoderAwareInterface, UserInterface
    */
   public function __construct()
   {
+    $this->addRole("ROLE_USER");
+
     $currentDate = new \DateTime('NOW');
     $this->dateOfCreation = $currentDate;
     $this->dateOfChange   = $currentDate;
